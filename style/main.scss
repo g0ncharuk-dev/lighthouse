@@ -1,0 +1,141 @@
+//mixin
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+//mixin
+
+.mainMobile-wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../static/img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  .mobile-layout-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .9;
+    background-color: black;
+  }
+
+  .mainMobile-lighthouse {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    img{
+      width: 100%;
+      margin: 0 auto;
+      max-width:  500px;
+    }
+  }
+  .mainMobile-grass {
+    position: absolute;
+    bottom: 0;
+    img {
+      width: 100%;
+    }
+  }
+
+  .mainMobile-logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 40%;
+    img {
+      width: 100%;
+
+    }
+  }
+
+  .mainMobile-house {
+    position: absolute;
+    bottom: 0;
+    left: 55%;
+    transform: translateX(-50%);
+    width: 70%;
+    img{
+      width: 100%;
+      margin-bottom: -15%;
+    }
+  }
+  .mainMobile-house-link {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    z-index: 99;
+    .link-main{
+      @include aspect-ratio(1,1);
+      display: block;
+      opacity: 0;
+      background-color: red;
+    }
+
+  }
+  .mainMobile-table{
+    position: absolute;
+    bottom: 0;
+    right:  -70px;
+    width: 70%;
+    img{
+      width: 100%;
+      margin-bottom: -25%;
+    }
+  }
+  .mainMobile-table-link {
+    position: absolute;
+    bottom: 0;
+    right:  -70px;
+    width: 50%;
+    .link-main{
+      @include aspect-ratio(1,1);
+      display: block;
+      opacity: 0;
+      background-color: red;
+    }
+
+  }
+
+  .mainMobile-moon {
+    position: absolute;
+    width: 40%;
+    top: 100px;
+    right: 0;
+    img{
+      width: 100%;
+
+    }
+  }
+  .mainMobile-moon-link {
+    position: absolute;
+    width: 40%;
+    top: 100px;
+    right: 0;
+    .link-main{
+      @include aspect-ratio(1,1);
+      display: block;
+      opacity: 0;
+      background-color: red;
+    }
+  }
+}
+
