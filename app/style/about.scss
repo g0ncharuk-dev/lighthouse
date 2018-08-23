@@ -1,0 +1,126 @@
+//mixin
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+//mixin
+
+.about-wrapper {
+  background-image: url("../static/img/about_back.png");
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+  .about-main {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .about-description-main {
+      .about-description {
+        box-shadow: 0 22px 21px rgba(0, 0, 0, 0.26);
+        //background-color: #1e2225;
+        padding: 50px 30px;
+        position: relative;
+        h1 {
+          color: #878787;
+          font-size: 32px;
+          font-weight: 900;
+        }
+        p {
+          color: #ffffff;
+          font-family: "Montserrat";
+          font-size: 16px;
+          font-weight: 200;
+        }
+        .about-description-bg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #1e2225;
+        }
+        .about-labels {
+          position: absolute;
+          left: 0;
+          bottom: 30px;
+          display: flex;
+          transform: translateY(100%);
+          width: 100%;
+          justify-content: center;
+          background-color: #1e2225;
+
+          .label {
+            padding-top: 50px;
+            max-width: 142px;
+            width: 25%;
+            height: auto;
+            margin: 0;
+            padding-left: 5px;
+            padding-right: 5px;
+            h2 {
+              width: 90%;
+              text-align: center;
+              color: #ceb783;
+              margin: 0;
+              font-size: 90%;
+              font-weight: 700;
+              white-space: nowrap;
+            }
+            p {
+              width: 90%;
+              text-align: center;
+              color: #ceb783;
+              font-size: 90%;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+    .about-moon-main {
+      position: absolute;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .about-wrapper {
+
+    .about-main {
+
+      .about-description-main {
+        .about-description {
+          .about-labels {
+            background-color: transparent;
+            justify-content: flex-start;
+            .label {
+              background-image: url("../static/img/label_about.png");
+              background-position: center center;
+              background-size: contain;
+              background-repeat: no-repeat;
+              margin: 0 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

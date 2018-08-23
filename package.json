@@ -1,0 +1,15 @@
+{
+  "name": "lighthouse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "homepage": "https://g0ncharuk.github.io/lighthouse/",
+  "scripts": {
+    "deploy": "gh-pages -d app"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^1.2.0"
+  }
+}

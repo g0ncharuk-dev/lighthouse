@@ -1,0 +1,101 @@
+body {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  font-size: 16px;
+  font-family: "Montserrat";
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+button:focus {
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(23, 27, 29, 0.6);
+  z-index: 999;
+  .dropdown-title {
+    color: #3b3b3b;
+    flex: 1;
+    font-size: 28px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  .hamburger {
+    position: relative;
+    .hamburger_bars {
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      .bars {
+        height: 3px;
+        width: 30px;
+        background-color: #3b3b3b;
+        position: relative;
+        transform-origin: center center;
+        transition: transform 0.7s ease;
+      }
+    }
+  }
+  .navbar-collapse {
+    .navbar-text,.nav-link {
+      text-shadow: 0 0 13px rgba(255, 255, 255, 0.35);
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+  .dropdown {
+    padding-right: 10px;
+    .dropdown-menu {
+      background-color: rgba(23, 27, 29, 0.6);
+      border: 0;
+      border-radius: 0;
+      width: 100%;
+      .dropdown-item {
+        color: #878787;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: inherit;
+        white-space: nowrap;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        i{
+          display: block;
+          background-image: url("../static/img/menu_arrow.png");
+          width: 8px;
+          height: 14px;
+          margin-right: 15px;
+        }
+      }
+    }
+
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    background-color: transparent;
+    .dropdown {
+      padding-right: 10px;
+      &.show {
+        background-color: rgba(23, 27, 29, 0.6);
+      }}
+  }
+}

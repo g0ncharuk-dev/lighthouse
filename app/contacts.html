@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
+          integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style/font.css">
+    <link rel="stylesheet" href="style/global.css">
+    <link rel="stylesheet" href="style/contacts.css">
+
+</head>
+<body class="contacts-wrapper">
+<nav class="navbar navbar-expand-lg navbar-light justify-content-start py-3">
+    <button class="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target="#navbar"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="hamburger">
+            <span class="hamburger_bars">
+                <span class="bars"></span>
+                <span class="bars"></span>
+                <span class="bars"></span>
+            </span>
+        </div>
+    </button>
+    <div class="dropdown show">
+        <div class="d-flex align-items-center py-0" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true"
+             aria-expanded="true">
+            <div class="d-none d-lg-block navbar-toggler  mr-3">
+                <div class="hamburger">
+                    <span class="hamburger_bars">
+                        <span class="bars"></span>
+                        <span class="bars"></span>
+                        <span class="bars"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="dropdown-title">CONTACTS</div>
+        </div>
+        <div class="d-none d-lg-block">
+            <div class="dropdown-menu my-0 show" aria-labelledby="dropdownMenu">
+                <a class="dropdown-item" href="index.html"><i></i>MAIN</a>
+                <a class="dropdown-item" href="about.html"><i></i>ABOUT</a>
+                <a class="dropdown-item" href="work.html"><i></i>OUT WORKS</a>
+            </div>
+        </div>
+
+    </div>
+    <div id="navbar" class="collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav text-center ">
+            <li class="nav-item">
+                <a class="nav-link d-lg-none" href="index.html">MAIN</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link d-lg-none" href="about.html">ABOUT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link d-lg-none" href="work.html">OUT WORKS</a>
+            </li>
+            <li class="nav-item mr-3">
+                <span class="navbar-text">
+                    +375291641000
+                </span>
+            </li>
+            <li class="nav-item mr-3">
+                <span class="navbar-text">
+                    info@lighthouse.by
+                </span>
+            </li>
+            <li class="nav-item">
+                <span class="navbar-text">
+                    г. Минск ул. Якуба Коласа д.8
+                </span>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="contacts-main">
+    <div class="container">
+        <div class="row">
+            <div class="contacts-main-container mx-auto col-12 col-sm-10  col-lg-10 ">
+                <div class="contacts-background">
+                    <img class="portfolio_image" src="static/img/contact_table.png" alt="">
+                </div>
+                <div class="content">
+                    <form>
+                        <div class="row align-items-center">
+                            <div class="form-group col-lg-4">
+                                <input type="text" class="control" id="text1"
+                                       placeholder="Имя">
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <input type="text" id="text2"
+                                       placeholder="Телефон">
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <input type="email" id="text3"
+                                       placeholder="E-mail">
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <input type="text"  id="text4"
+                                       placeholder="Ваш комментарий...">
+                            </div>
+
+                            <div class="col-lg-12">
+                                <button type="submit" class="btn">ОТПРАВИТЬ</button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
+        integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+
+<script src="script/contacts.js"></script>
+
+</body>
+</html>
